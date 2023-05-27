@@ -1,0 +1,15 @@
+.card {
+    max-width: 400px;
+    margin: auto;
+}
+
+/* #pokemon-img {
+    max-width: 100%;
+    height: auto;
+  } */
+
+.card-img-top {
+    height: 200px;
+    width: 200px;
+    object-fit: contain;
+}

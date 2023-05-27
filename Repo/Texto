@@ -1,0 +1,14 @@
+Calculadora de préstamos (30%).
+
+Características:
+•    Deberá ser un formulario en el navegador
+•    Campos del formulario:
+     - Cantidad por solicitar o prestar
+     - Interés
+     - Años del préstamo
+•    Mostrar como resultado
+      - Pago mensual
+      - Pago Total
+      - Total de interés
+•    La sección de resultados solo se mostrara al apretar el botón de cálculo, no deberá de aparecer al cargar la aplicación en el navegador.
+•    Los campos del formulario solo deberán aceptar números.

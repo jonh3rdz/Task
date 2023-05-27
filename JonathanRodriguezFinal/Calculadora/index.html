@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Calculadora de prestamos | Jonh Rodriguez</title>
+  <link rel="stylesheet" href="./css/styles.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Iconscout Link For Icons -->
+  <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+</head>
+
+<body>
+  <main class="wrapper">
+    <div class="row text-center">
+      <div class="task-input">
+        <button class="cantidad-btn">$</button>
+        <input type="number" placeholder="cantidad a solicitar">
+      </div>
+      <div class="task-input">
+        <button class="cantidad-btn">%</button>
+        <input type="number" placeholder="Interés">
+      </div>
+      <div class="task-input">
+        <button class="cantidad-btn">#</button>
+        <input type="number" placeholder="Años">
+      </div>
+      <div class="card">
+        <div class="card-body">
+          <button class="btn btn-primary" data-precio="300">Calcular</button>
+          <!-- <button  id="btnFinalizar" class="add-btn">Calcular</button> -->
+        </div>
+      </div>
+
+      <!-- <button class="add-btn"><img src="plus-icon.svg" alt="add"></button> -->
+
+      <footer id="footer" class="container mt-3">
+        <template id="templateFooter">
+          <div class="card">
+            <h1>Resultado</h1>
+            <div class="task-input">
+              <button class="cantidad-btn">Pago mensual</button>
+              <input id="pago_mensual" type="number">
+            </div>
+            <div class="task-input">
+              <button class="cantidad-btn">Pago total</button>
+              <input id="pago_tatal" type="number">
+            </div>
+            <div class="task-input">
+              <button class="cantidad-btn">Total de interes</button>
+              <input id="total_interes" type="number">
+            </div>
+          </div>
+        </template>
+      </footer>
+    </div>
+  </main>
+
+
+  <script src="./js/app.js"></script>
+
+</body>
+
+</html>
