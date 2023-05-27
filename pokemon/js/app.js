@@ -17,7 +17,7 @@ fetch(`${API_URL}${Math.floor(Math.random() * 898) + 1}`)
   .then(data => displayPokemonData(data))
   .catch(error => console.error(error));
 
-// Buscar un Pokémon por nombre o número
+// Buscar un Pokémon por nombre o número con boton
 searchButton.addEventListener('click', () => {
   const searchQuery = searchInput.value.toLowerCase();
   fetch(`${API_URL}${searchQuery}`)
@@ -31,6 +31,22 @@ searchButton.addEventListener('click', () => {
     .catch(error => displayErrorMessage(error));
 });
 
+// Buscar un Pokémon por nombre o número con enter
+searchInput.addEventListener("keyup", e => {
+  if (e.key == "Enter") {
+    const searchQuery = searchInput.value.toLowerCase();
+    fetch(`${API_URL}${searchQuery}`)
+      .then(response => {
+        if (!response.ok) {
+          throw new Error('No se encontró ningún Pokémon con ese nombre o número.');
+        }
+        return response.json();
+      })
+      .then(data => displayPokemonData(data))
+      .catch(error => displayErrorMessage(error));
+  }
+});
+
 // Mostrar la información del Pokémon en la tarjeta
 function displayPokemonData(data) {
   pokemonImage.src = data.sprites.other.dream_world.front_default;
@@ -41,10 +57,10 @@ function displayPokemonData(data) {
   pokemonDefense.innerText = data.stats[2].base_stat;
   pokemonSpecialAttack.innerText = data.stats[3].base_stat;
   card.style.display = 'block';
-  }
-  
-  // Mostrar un mensaje de error en la tarjeta
-  function displayErrorMessage(error) {
+}
+
+// Mostrar un mensaje de error en la tarjeta
+function displayErrorMessage(error) {
   pokemonImage.src = '';
   pokemonName.innerText = '';
   pokemonType.innerText = '';
@@ -54,9 +70,9 @@ function displayPokemonData(data) {
   pokemonSpecialAttack.innerText = '';
   card.style.display = 'none';
   alert(error);
-  }
-  
-  // Convertir la primera letra de una cadena en mayúscula
-  function capitalizeFirstLetter(string) {
+}
+
+// Convertir la primera letra de una cadena en mayúscula
+function capitalizeFirstLetter(string) {
   return string.charAt(0).toUpperCase() + string.slice(1);
-  }
+}
