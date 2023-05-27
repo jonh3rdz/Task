@@ -146,4 +146,10 @@ const mostrarHeaderFooter = () => {
     header.appendChild(cloneHeader)
     footer.appendChild(cloneFooter)
 };
+
+
+
+
+
+
 // elDemio/
