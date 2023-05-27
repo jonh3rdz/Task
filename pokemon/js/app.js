@@ -31,7 +31,7 @@ searchButton.addEventListener('click', () => {
     .catch(error => displayErrorMessage(error));
 });
 
-// Buscar un Pokémon por nombre o número con enter
+// Buscar un Pokémon por nombre o número con apretar enter
 searchInput.addEventListener("keyup", e => {
   if (e.key == "Enter") {
     const searchQuery = searchInput.value.toLowerCase();
