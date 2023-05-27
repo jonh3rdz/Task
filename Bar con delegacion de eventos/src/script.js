@@ -76,7 +76,7 @@ const btnAumentar = (e) => {
     })
     mostrarCarrito()
 }
-
+// testingApp
 const btnDisminuir = (e) => {
     carritoArray = carritoArray.filter((item) => {
         if (item.id === e.target.dataset.id) {
@@ -146,3 +146,4 @@ const mostrarHeaderFooter = () => {
     header.appendChild(cloneHeader)
     footer.appendChild(cloneFooter)
 };
+// elDemio/
